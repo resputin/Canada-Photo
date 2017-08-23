@@ -1,0 +1,7 @@
+<% if logged_in? %>
+  <%= form_for(@image) do |f| %>
+    <%= f.text_field :content %>
+    <%= f.file_field :imager %>
+    <%= f.submit "New Picture"%>
+  <% end %>
+<% end %>
