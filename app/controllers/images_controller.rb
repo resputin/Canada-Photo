@@ -3,10 +3,16 @@ class ImagesController < ApplicationController
   def create
     @image = current_user.images.build(image_params)
     if @image.save
-      redirect_to users_path
+      redirect_to root_path
     else
-      render user
+      render root_path
     end
+  end
+
+  def show
+    @image = Image.find(params[:id])
+    @views = @image.views
+    Image.add_view @image
   end
 
   private

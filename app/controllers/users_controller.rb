@@ -17,7 +17,7 @@ class UsersController < ApplicationController
 
     if @user.save
       log_in @user
-      redirect_to @user
+      redirect_to root_path
     else
       render 'new'
     end
@@ -26,6 +26,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end

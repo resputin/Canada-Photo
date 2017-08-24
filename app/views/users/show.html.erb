@@ -1,5 +1,6 @@
-<%= @user.id %>
 <% @images.each do |image| %>
-  <%= image_tag image.imager %>
+  <%= link_to image_path image do %>
+    <%= image_tag image.imager.thumb  %>
+  <% end %>
 <% end %>
 
