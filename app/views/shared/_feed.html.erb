@@ -1,0 +1,8 @@
+<% if @feed_items.try(:any?) %>
+  <% @feed_items.each do |image| %>
+    <%= link_to image.user.name, user_path(id: image.user.id) %>
+    <%= link_to image_path image do %>
+      <%= image_tag image.imager.feed  %>
+    <% end %>
+  <% end %>
+<% end %>

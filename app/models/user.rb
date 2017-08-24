@@ -4,4 +4,8 @@ class User < ApplicationRecord
   validates :email, presence: true 
   validates :password, presence: true, length: { minimum: 6 }
   has_secure_password
+
+  def feed
+    Image.where('user_id = ?', id)
+  end
 end
