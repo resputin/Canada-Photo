@@ -25,7 +25,7 @@ class Image < ApplicationRecord
 
     @twilio_client.messages.create(
       :from => "+1#{ENV['twilio_phone_number']}",
-      :to => 6197278112,
+      :to => ENV['dylan_phone'],
       :body => "This is an message. It gets sent to Dylan"
     )
   end
