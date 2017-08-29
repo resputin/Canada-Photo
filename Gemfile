@@ -36,6 +36,7 @@ gem 'mini_magick', '~> 4.8'
 gem 'will_paginate',           '3.1.5'
 gem 'bootstrap-will_paginate', '1.0.0'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
+gem 'twilio-ruby', '~> 5.2'
 
 
 # Use Capistrano for deployment
